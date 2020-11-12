@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box {
+				background-color: orange;
+				width: 800px;
+				height: 600px;
+				margin: 0 auto;
+				/**
+				 * 1. 开启flex布局 ：
+				 * flex:  块级元素
+				 * inline-flex: 行类元素
+				 */
+				display: flex;
+				
+				/*2. flex-direction:决定主轴的方向*/
+				/*row: 主轴从左到右, 默认*/
+				/*row-reverse:主轴从右到左*/
+				/*column: 主轴从上到下*/
+				/*column-reverse:主轴从下到上*/
+				/* flex-direction: column-reverse; */
+				
+				/*3. justify-content:决定flex items在主轴的对齐方式*/
+				/*flex-start: 与main start对齐, 默认*/
+				/*flex-end: 与main end对齐*/
+				/*center: 居中*/
+				/*space-between: flex items之间的间距相等，与main start、main end两端对齐*/
+				/*space-evenly: flex items之间的间距相等，flex items与main start、main end之间的间距等于flex items之间的间距*/
+				/*space-around: flex items之间的间距相等，flex items与main start、main end之间的间距等于flex items之间的间距的一半*/
+				/* justify-content: space-around; */
+				
+				/*4. align-items: 决定flex items在cross axis的对齐方式*/
+				/*normal: 默认，若没给items高度的话，items的高度会等于main size*/
+				/*stretch: 档flex items在cross axis方向的size为auto时，会自动拉伸填充flex container*/
+				/*flex-start: 与cross start对齐*/
+				/*flex-end: 与cross end对齐*/
+				/*center: 居中对齐*/
+				/*baseline: 与基准线对齐*/
+				/* align-items: baseline; */
+				
+				/*5. flex-wrap: 决定flex container是单行还是多行*/
+				/*nowrap: 单行，默认*/
+				/*wrap: 多行*/
+				/*wrap-reverse: 多行（对比wrap，cross start与cross end相反）*/
+				/* flex-wrap: wrap; */
+				
+				/*6. flex-flow: 缩写属性 -> flex-direction || flex-wrap*/
+				flex-flow: row wrap;
+				justify-content: space-evenly;
+				
+				/*7. align-content: 决定多行flex items在cross axis上的对齐方式，用法与justify-content类似*/
+				/*flex-start: 与cross start对齐, 默认*/
+				/*flex-end: 与cross end对齐*/
+				/*center: 居中*/
+				/*space-between: flex items之间的间距相等，与cross start、cross end两端对齐*/
+				/*space-evenly: flex items之间的间距相等，flex items与cross start、cross end之间的间距等于flex items之间的间距*/
+				/*space-around: flex items之间的间距相等，flex items与cross start、cross end之间的间距等于flex items之间的间距的一半*/
+				align-content: space-around;
+			}
+			.box .item {
+				width: 150px;
+				height: 150px;
+				line-height: 150px;
+				text-align: center;
+				color: #fff;
+			}
+			.item1 {
+				background-color: green;
+				/* height: 60px; */
+				/* font-size: 50px; */
+			}
+			.item2 {
+				background-color: red;
+				/* height: 150px; */
+			}
+			.item3 {
+				background-color: blue;
+				/* height: 100px; */
+			}
+			.item4 {
+				background-color: cadetblue;
+				/* height: 200px; */
+			}
+			.item5 {
+				background-color: burlywood;
+			}
+			.item6 {
+				background-color: black;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="item item1">item1</div>
+			<div class="item item2">item2</div>
+			<div class="item item3">item3</div>
+			<div class="item item4">item4</div>
+			<div class="item item5">item5</div>
+			<div class="item item6">item6</div>
+		</div>
+	</body>
+</html>
